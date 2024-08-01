@@ -4,6 +4,7 @@ general:
 
 input:
     samples_file: samples.tsv
+    read_length: 300
 
 output:
     trim_primers: false

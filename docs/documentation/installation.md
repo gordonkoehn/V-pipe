@@ -32,6 +32,7 @@ bash quick_install.sh -p vp-analysis -w work
 
 V-pipe is optimized for Linux or Mac OS systems, and we heavily rely on bioconda, which isn't supported on Windows. Therefore, we recommend users with a Windows system to [install WSL2](https://learn.microsoft.com/en-us/windows/wsl/install).
 
+(quick-install-v-pipe-and-conda)=
 ## Quick install V-pipe and conda
 
 V-pipe uses the [Bioconda](https://bioconda.github.io/) bioinformatics software repository for all its pipeline components. The pipeline itself is implemented using [Snakemake](https://snakemake.readthedocs.io/en/stable/). Although you can install all the dependencies manually, we recommend using our install quick install script:
@@ -72,7 +73,12 @@ Now you can check your installation with a small test dataset:
 
 ```bash
 cd work
+# copy the example data from the repository to your working directory
 cp -r ../V-pipe/docs/example_HIV_data/* .
+# check what will be run with a dry run
+./vpipe -n
+# run vpipe on a small HIV test dataset
+# this will install all dependencies and run the pipeline
 ./vpipe 
 ```
 
@@ -99,6 +105,16 @@ git clone https://github.com/cbg-ethz/V-pipe.git
 ```
 
 If you haven't already done so, install snakemake by using the [official instructions](https://github.com/cbg-ethz/V-pipe.git), and you can run the pipeline with `snakemake --use-conda`. 
+
+Test the installation with a small dataset: 
+
+```bash
+mkdir work
+cd work
+cp -r ../V-pipe/docs/example_HIV_data/* .
+snakemake -s ../V-pipe/workflow/Snakefile --use-conda --dry-run
+snakemake -s ../V-pipe/workflow/Snakefile --use-conda --cores 4
+```
 
 ### Using Docker
 
