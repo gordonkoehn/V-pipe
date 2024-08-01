@@ -47,18 +47,6 @@ The script `quick_install.sh` has the following options:
 * using `-w` will create a working directory and populate it. It will create a boilerplate `config/config.yaml`, and create a handy `vpipe` short-cut script to invoke `snakemake`.
 * an additional option `-b` (not demonstrated above) allows to install a spefic branch or tagged version. If nothing is specified, the master branch will be installed.
 
-```{tip}
-To create and populate other new working directories, you can call `init_project.sh` from within the new directory:
-
-```bash
-cd vp-analysis/
-
-mkdir -p working_2
-cd working_2
-../V-pipe/init_project.sh
-
-```
-
 After running the `quick_install.sh` script, you should have a directory structure like this:
 
 ```text
@@ -79,6 +67,26 @@ vp-analysis
 - `mambaforge` is the directory where conda will be installed including the dependencies to start using V-pipe.
 - `V-pipe` is the directory where V-pipe's code will be downloaded from GitHub
 - `work` finally, each analysis of virus data will be performed in a directory like `work…`. If you start a new analysis of a dataset, you can create a new directory, run `init_project.sh` inside the directory and get started.
+
+Now you can check your installation with a small test dataset:
+
+```bash
+cd work
+cp -r ../V-pipe/docs/example_HIV_data/* .
+./vpipe 
+```
+
+```{tip}
+To create and populate other new working directories, you can call `init_project.sh` from within the new directory:
+
+```bash
+cd vp-analysis/
+
+mkdir -p working_2
+cd working_2
+../V-pipe/init_project.sh
+
+```
 
 ## Other installation options
 
