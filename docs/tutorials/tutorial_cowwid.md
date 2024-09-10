@@ -231,8 +231,10 @@ will produce:
 ```
 
 <!-- What's this? -->
-
-curl 'https://polybox.ethz.ch/index.php/s/ZumerimckhgCRYB/download' -o cowwid-tutorial.tar.xz
+<!-- The samples can be found at  - some description would be great. -->
+```
+curl https://polybox.ethz.ch/index.php/s/ZumerimckhgCRYB/download -o cowwid-tutorial.tar.xz
+```
 
 ## Getting data into V-pipe
 
