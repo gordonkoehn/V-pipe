@@ -19,14 +19,14 @@ jupyter:
 # SARS-CoV-2 Wastewater Surveillance Tutorial
 
 This tutorial introduces the type of analysis that we perform as part of [national surveillance program of SARS-CoV-2 variants in wastewater](https://cov-spectrum.ethz.ch/story/wastewater-in-switzerland).
-It covers some specific tools that were developped and integrated into V-pipe for the specific analysis of wastewater:
+It covers some specific tools that were developed and integrated into V-pipe for the specific analysis of wastewater:
 
 - [COJAC](https://github.com/cbg-ethz/cojac): Integrated into V-pipe, component tool for early detection based on combination of mutations
 - [LolliPop](https://github.com/cbg-ethz/LolliPop): Integrated into V-pipe, component tool for kernel-based deconvolution of variants
 
 
-After reading, you should be able to reproduce the steps necessary to analyse your data
-The exact producedure we use in our surveillance program is [documented in the repository COWWID](https://github.com/cbg-ethz/cowwid), and you can refer to that repository for details such as signature files used, and other similar settings.
+After reading, you should be able to reproduce the steps necessary to analyse your data.
+The exact procedure we use in our surveillance program is [documented in the repository COWWID](https://github.com/cbg-ethz/cowwid), and you can refer to that repository for details such as signature files used, and other similar settings.
 
 For the purpose of this Tutorial, we will work with the master branch of V-pipe and use the _sars-cov-2_ virus base config which is adapted for the SARS-CoV-2 virus.
 
